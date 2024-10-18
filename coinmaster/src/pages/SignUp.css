@@ -11,22 +11,23 @@ body {
 
 } */
 
-.loginpage {
+.signuppage {
     display: flex; /* Use flexbox to place items side by side */
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
-    /* Gap between the image and the login container */
+     /* Gap between the image and the login container */
     margin-top: 100px; /* Margin at the top of the login page */
 }
 
-.loginimage {
+.signupimage {
     background-color: #404f6366;
     border-radius: 40px 0 0 40px; /* Corrected */
     width: 500px; /* Add width */
     height: 500px; /* Add height */
+
 }
 
-.logincontainer {
+.signupcontainer {
     /* Add border to the login container */
     border-radius:0 40px 40px 0;
     height: 500px; /* Set height of the container */
@@ -65,7 +66,7 @@ body {
     padding: 0 50px;
 } */
 
-.login-box h2 {
+.signup-box h2 {
     font-size: 2em;
     color: rgb(108, 143, 192);
     text-align: center;
@@ -73,7 +74,7 @@ body {
 
 .input-box {
     position: relative;
-    margin: 25px 0;
+    margin: 15px 0;
 }
 
 .input-box input {
@@ -143,18 +144,18 @@ body {
     font-weight: 600;
 }
 
-.signup-link {
+.login-link {
     margin: 20px 0 10px;
     text-align: center;
 }
 
-.signup-link a {
+.login-link a {
     font-size: 1em;
     color: #638bb8;
     text-decoration: none;
     font-weight: 600;
 }
 
-.signup-link a:hover { 
+.login-link a:hover { 
     text-decoration: underline; 
 }

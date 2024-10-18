@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./Login.css";
+import "./SignUp.css";
 import login from "../assets/loginimg.jpg";
-import logingif from "../assets/logingif.gif";
 import { Link } from "react-router-dom";
-const Login = () => {
+import logingif from "../assets/logingif.gif";
+const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -14,13 +14,13 @@ const Login = () => {
   };
 
   return (
-    <div className="loginpage">
-      <div className="loginimage">
-        <img src={logingif} width={500} height={500} style={{borderRadius:'40px 0 0 40px' }}></img>
+    <div className="signuppage">
+      <div className="signupimage">
+        <img src={logingif} width={500} height={500} style={{borderRadius:'40px 0 0 40px'}}></img>
       </div>
-      <div className="logincontainer">
-        <div className="login-box">
-          <h2>Login</h2>
+      <div className="signupcontainer">
+        <div className="signup-box">
+          <h2>SignUp</h2>
           <form onSubmit={handleSubmit}>
             <div className="input-box">
               <input
@@ -41,17 +41,32 @@ const Login = () => {
               />
               <label>Password</label>
             </div>
-
-            <div className="forgot-pass">
-              <a href="#">Forgot your password?</a>
+            <div className="input-box">
+              <input
+                type="password"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <label>Confirm Password</label>
             </div>
+            <div className="input-box">
+              <input
+                type="password"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <label>OTP</label>
+            </div>
+            
 
             <button className="btn" type="submit">
-              Login
+              SignUp
             </button>
 
-            <div className="signup-link" style={{display:"flex", gap:"5px"}}>
-              <p style={{color:"white"}}>Do not have an account?</p><Link to='/signup' style={{textDecoration:"underline"}}>SignUp</Link>
+            <div className="login-link" style={{display:"flex", gap:"5px"}}>
+              <p style={{color:"white"}}>Already have an account?</p><Link to='/login' style={{textDecoration:"underline"}}>Login</Link>
             </div>
           </form>
         </div>
@@ -65,4 +80,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
